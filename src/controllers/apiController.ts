@@ -1,5 +1,7 @@
 import { Request, Response } from "express";
 
+import { Phrase } from "../models/phrase";
+
 export const ping = (req: Request, res: Response) => {
   res.json({pong: true});
 }

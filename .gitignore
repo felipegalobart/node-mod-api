@@ -132,3 +132,7 @@ dist
 # Dsstore
 
 .DS_Store
+
+# Pasta TMP para upload de arquivos.
+
+.tmp

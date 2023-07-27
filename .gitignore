@@ -135,4 +135,4 @@ dist
 
 # Pasta TMP para upload de arquivos.
 
-.tmp
+.tmp/

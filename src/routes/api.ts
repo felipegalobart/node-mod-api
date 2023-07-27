@@ -23,7 +23,7 @@ const upload = multer({
         callback(null, false);
       }
   },
-  limits: { fileSize: 1000000} //descomentar para limitar o tamanho do arquivo. (em bytes)
+  //limits: { fileSize: 1000000} //descomentar para limitar o tamanho do arquivo. (em bytes)
 });
 
 const router = Router();

@@ -136,3 +136,6 @@ dist
 # Pasta TMP para upload de arquivos.
 
 /tmp
+/public
+/media
+

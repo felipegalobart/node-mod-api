@@ -9,12 +9,21 @@ const storageConfig = multer.diskStorage({
   },
   filename(req, file, callback) {
       let randomName = Math.floor(Math.random()* 9999999);
-      callback(null, `${randomName+Date.now()}.png.`)
+      callback(null, `${randomName+Date.now()}.png`)
   },
 });
 
 const upload = multer({
-  storage: storageConfig
+  storage: storageConfig,
+  fileFilter(req, file, callback) {
+      const allowed: string[] = ['image/jpg', 'image/jpeg', 'image/png']
+      if (allowed.includes( file.mimetype )) {
+        callback(null, true);
+      } else {
+        callback(null, false);
+      }
+  },
+  //limits: { fileSize: 2000000} //descomentar para limitar o tamanho do arquivo. (em bytes)
 });
 
 const router = Router();

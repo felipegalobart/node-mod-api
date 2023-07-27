@@ -9,7 +9,7 @@ const storageConfig = multer.diskStorage({
   },
   filename(req, file, callback) {
       let randomName = Math.floor(Math.random()* 9999999);
-      callback(null, `${randomName+Date.now()}.png`)
+      callback(null, `${randomName+Date.now()}.png.`)
   },
 });
 
